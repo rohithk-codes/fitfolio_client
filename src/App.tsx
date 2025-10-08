@@ -20,7 +20,14 @@ const App = () => {
       <h1 className="text-green-400 m-4 font-bold">Welcome to Fit_Folio</h1>
 
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <SkeletonCard />
+       <div className="flex ">
+  {Array.from({ length: 5 }).map((_, i) => (
+    <div className="p-4 ">
+      <SkeletonCard key={i} />
+    </div>
+  ))}
+</div>
+       
         <ModeToggle />
       </ThemeProvider>
     </div>
