@@ -60,10 +60,10 @@ export function ServicesSection() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="text-center mb-16"
         >
-          <Badge variant="outline" className="mb-4 px-4 py-1 border-primary/20 text-primary">
+          <Badge variant="outline" className=" saira mb-4 px-4 py-1 border-primary/20 text-primary">
             Discover Our Offerings
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+          <h2 className=" orbitron text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
             OUR SERVICES
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
@@ -114,7 +114,7 @@ export function ServicesSection() {
 
                 {/* Card Content */}
                 <CardContent className="p-6">
-                  <h3 className={`text-xl font-bold mb-2 ${service.textColor}`}>{service.title}</h3>
+                  <h3 className={` saira text-xl font-bold mb-2 ${service.textColor}`}>{service.title}</h3>
                   <p className="text-slate-600 text-sm">{service.description}</p>
                 </CardContent>
 
@@ -122,7 +122,7 @@ export function ServicesSection() {
                 <CardFooter className="p-6 pt-0">
                   <Button 
                     variant="ghost" 
-                    className={`group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300 px-6 ${service.textColor}`}
+                    className={` saira group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-secondary group-hover:text-white transition-all duration-300 px-6 ${service.textColor}`}
                   >
                     Learn More
                   </Button>
@@ -139,7 +139,7 @@ export function ServicesSection() {
           transition={{ duration: 0.7, delay: 1 }}
           className="mt-16 text-center"
         >
-          <Button className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-8 py-6 rounded-full text-lg">
+          <Button className=" saira bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-8 py-6 rounded-full text-lg">
             Explore All Services
           </Button>
         </motion.div>

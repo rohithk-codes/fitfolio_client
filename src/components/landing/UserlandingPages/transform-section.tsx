@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { Button } from "@/components/ui/button"
-import { motion, useInView } from "framer-motion"
+import { useRef } from "react";
+import { Button } from "@/components/ui/button";
+import { motion, useInView } from "framer-motion";
 
 export function TransformSection() {
-  const ref = useRef<HTMLElement>(null)
-  const isInView = useInView(ref, { once: true, amount: 0.3 })
+  const ref = useRef<HTMLElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
     <section ref={ref} className="py-20 relative overflow-hidden">
@@ -21,16 +21,21 @@ export function TransformSection() {
         >
           <h2 className="text-3xl md:text-4xl font-bold">
             READY TO TRANSFORM <br />
-            <span className="gradient-text text-4xl md:text-5xl">YOUR FITNESS JOURNEY?</span>
+            <span className="gradient-text text-4xl md:text-5xl">
+              YOUR FITNESS JOURNEY?
+            </span>
           </h2>
 
           <p className="text-lg text-muted-foreground">
-            Join Our Exclusive Community Now And Experience The Power Of Data-Driven Fitness Like Never Before!
+            Join Our Exclusive Community Now And Experience The Power Of
+            Data-Driven Fitness Like Never Before!
           </p>
 
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+            animate={
+              isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
+            }
             transition={{ duration: 0.6, delay: 0.3 }}
             className="pt-4"
           >
@@ -41,6 +46,5 @@ export function TransformSection() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
-

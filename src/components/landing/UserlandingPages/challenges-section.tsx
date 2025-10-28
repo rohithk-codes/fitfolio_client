@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface Challenge {
-  number: string
-  title: string
-  description: string
-  color: string
+  number: string;
+  title: string;
+  description: string;
+  color: string;
 }
 
 const challenges: Challenge[] = [
@@ -54,11 +54,11 @@ const challenges: Challenge[] = [
       "In FitGenius, we replace trial and error with science. We use your workouts, meals, and fitness levels to guide you on a personalized science-backed journey.",
     color: "from-teal-500 to-teal-700",
   },
-]
+];
 
 export function ChallengesSection() {
-  const ref = useRef<HTMLElement>(null)
-  const isInView = useInView(ref, { once: true, amount: 0.1 })
+  const ref = useRef<HTMLElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
     <section ref={ref} className="py-20 relative overflow-hidden">
@@ -71,8 +71,12 @@ export function ChallengesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 space-y-4"
         >
-          <h2 className="text-3xl md:text-4xl font-bold">DO THESE SOUND FAMILIAR TO YOU AND</h2>
-          <p className="text-2xl md:text-3xl font-bold text-accent">CAN'T YOU ACHIEVE YOUR GOALS?</p>
+          <h2 className="text-3xl md:text-4xl font-bold">
+            DO THESE SOUND FAMILIAR TO YOU AND
+          </h2>
+          <p className="text-2xl md:text-3xl font-bold text-accent">
+            CAN'T YOU ACHIEVE YOUR GOALS?
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -84,16 +88,22 @@ export function ChallengesSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Card className="h-full card-hover border-0 overflow-hidden">
-                <CardHeader className={`bg-gradient-to-r ${challenge.color} text-white`}>
+                <CardHeader
+                  className={`bg-gradient-to-r ${challenge.color} text-white`}
+                >
                   <div className="flex items-center gap-3">
                     <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm">
-                      <span className="text-xl font-bold">{challenge.number}</span>
+                      <span className="text-xl font-bold">
+                        {challenge.number}
+                      </span>
                     </div>
                     <CardTitle>{challenge.title}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent className="pt-6">
-                  <p className="text-muted-foreground">{challenge.description}</p>
+                  <p className="text-muted-foreground">
+                    {challenge.description}
+                  </p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -101,6 +111,5 @@ export function ChallengesSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

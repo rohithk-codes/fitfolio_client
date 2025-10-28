@@ -1,13 +1,14 @@
+import {lazy} from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import LandingPage from "./components/landing/Landing"
+const UserRoutes = lazy(()=> import("./routes/UserRoutes"))
 
 const App = ()=>{
-
 
   return(
   <BrowserRouter>
  <Routes>
-  <Route path="/" element={<LandingPage/>}/>
+  <Route path="/*" element={<UserRoutes/>}/>
+
  </Routes>
   
   </BrowserRouter>

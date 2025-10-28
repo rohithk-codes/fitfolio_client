@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Activity, BarChart3, Apple } from "lucide-react"
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Activity, BarChart3, Apple } from "lucide-react";
 
 interface Feature {
-  icon: React.ReactNode
-  title: string
-  description: string
-  bgColor: string
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  bgColor: string;
 }
 
 const features: Feature[] = [
@@ -36,11 +36,11 @@ const features: Feature[] = [
       "Rich genetic data! Our AI-powered analysis curates personalized meal plans to fuel your body optimally. Achieve your fitness goals with scientifically-backed nutrition tailored to your unique body composition.",
     bgColor: "bg-accent",
   },
-]
+];
 
 export function DataDrivenSection() {
-  const ref = useRef<HTMLElement>(null)
-  const isInView = useInView(ref, { once: true, amount: 0.2 })
+  const ref = useRef<HTMLElement>(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
     <section ref={ref} className="py-20 relative overflow-hidden">
@@ -51,7 +51,7 @@ export function DataDrivenSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-center mb-4"
+          className=" orbitron text-3xl md:text-4xl font-bold text-center mb-4"
         >
           DATA-DRIVEN
         </motion.h2>
@@ -59,7 +59,7 @@ export function DataDrivenSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-2xl md:text-3xl font-bold text-center mb-16 text-primary"
+          className=" orbitron text-2xl md:text-3xl font-bold text-center mb-16 text-primary"
         >
           DECISIONS ON FITNESS
         </motion.h3>
@@ -87,6 +87,5 @@ export function DataDrivenSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
