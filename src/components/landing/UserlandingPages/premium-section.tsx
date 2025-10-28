@@ -78,7 +78,7 @@ export function PremiumSection() {
             className="text-center max-w-xl mx-auto px-4 lg:px-6 z-10"
           >
             <motion.h2 
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6" 
+              className=" orbitron text-3xl md:text-4xl lg:text-5xl font-bold mb-6" 
               style={{ 
                 background: "linear-gradient(90deg, #2c7da0 0%, #6a4c93 100%)",
                 WebkitBackgroundClip: "text",
@@ -105,7 +105,7 @@ export function PremiumSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Button className="bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 text-white px-8 py-2 rounded-full hover:shadow-lg hover:shadow-violet-400/20 transition-all duration-300">
+              <Button className=" saira bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-700 hover:to-violet-700 text-white px-8 py-2 rounded-full hover:shadow-lg hover:shadow-violet-400/20 transition-all duration-300">
                 START NOW
               </Button>
             </motion.div>

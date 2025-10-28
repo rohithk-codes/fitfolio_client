@@ -110,10 +110,27 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+
+}
+
+@theme {
+  /* Make saira the default font stack */
+  --default-font-family: "saira", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* Optionally also expose a named utility */
+  --font-saira: "saira", sans-serif;
+}
+
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
